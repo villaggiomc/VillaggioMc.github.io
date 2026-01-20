@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff di VillaggioMC</title>
+    <style>
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #1a2a1a; color: white;
+            display: flex; flex-direction: column; align-items: center;
+            padding-bottom: 50px;
+        }
+        .nav { width: 100%; padding: 20px; background: rgba(0,0,0,0.5); text-align: center; }
+        .nav a { color: #f1c40f; text-decoration: none; font-weight: bold; margin: 0 20px; }
+        
+        .staff-header { margin: 50px 0; text-align: center; }
+        .staff-header h1 { color: #f1c40f; font-size: 42px; text-shadow: 2px 2px #000; }
+        .staff-header p { font-size: 18px; opacity: 0.9; }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px; width: 95%; max-width: 1100px; margin-top: 30px;
+        }
+
+        .staff-member {
+            background: #2d4a2d; border: 2px solid #f1c40f;
+            border-radius: 15px; padding: 20px; text-align: center;
+            transition: 0.3s;
+        }
+        .staff-member:hover { transform: translateY(-8px); box-shadow: 0 8px 15px rgba(0,0,0,0.4); }
+
+        .staff-member img {
+            width: 100px; height: 100px;
+            border-radius: 15px;
+            border: 3px solid #f1c40f;
+            margin-bottom: 15px;
+            background: #1a2a1a;
+        }
+        .staff-member h3 { color: #f1c40f; margin-bottom: 5px; font-size: 20px; }
+        .staff-member .role { 
+            font-weight: bold; 
+            font-size: 12px; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .staff-member .quote { font-size: 14px; font-style: italic; opacity: 0.9; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="index.html">← Torna alla Home</a></div>
+
+    <div class="staff-header">
+        <h1>👑 Lo Staff di VillaggioMC</h1>
+        <p>I custodi del villaggio, sempre a tua disposizione!</p>
+    </div>
+
+    <div class="staff-grid">
+        
+        <div class="staff-member">
+            <img src="https://minotar.net/helm/Game_Invicible26/100.png" alt="Testa di Game_Invicible26">
+            <h3>Game_Invicible26</h3>
+            <div class="role" style="background: #e74c3c;">Founder</div>
+            <p class="quote">"Sotto il mio comando, il Villaggio non cadrà mai!"</p>
+        </div>
+
+        <div class="staff-member">
+            <img src="https://minotar.net/helm/MarioGamerSuper/100.png" alt="Testa di MarioGamerSuper">
+            <h3>MarioGamerSuper</h3>
+            <div class="role" style="background: #e74c3c;">Founder</div>
+            <p class="quote">"Creatività e divertimento sono la base del nostro mondo."</p>
+        </div>
+        <div class="staff-member">
+    <img src="https://minotar.net/helm/ManySteak5037/100.png" alt="Testa di ManySteak5037">
+    <h3>ManySteak5037</h3>
+    <div class="role" style="background: #FFD700;">SR.ADMIN</div>
+    <p class="quote">"Non serve solo un admin, ma anche uno più esperto! Sono qui per aiutare tutti!"</p>
+</div>
+
+        <div class="staff-member">
+            <img src="https://minotar.net/helm/RIP_dna/100.png" alt="Testa di RIP_dna">
+            <h3>RIP_dna</h3>
+            <div class="role" style="background: #9b59b6;">Developer</div>
+            <p class="quote">"Ottimizzo il codice per rendere l'esperienza di gioco perfetta."</p>
+        </div>
+
+        <div class="staff-member">
+            <img src="https://minotar.net/helm/Francy321/100.png" alt="Testa di Francy321">
+            <h3>Francy321</h3>
+            <div class="role" style="background: #27ae60;">Admin</div>
+            <p class="quote">"Qui per aiutarvi e far rispettare le leggi del Villaggio."</p>
+        </div>
+
+        <div class="staff-member">
+            <img src="https://minotar.net/helm/serianwgf/100.png" alt="Testa di serianwgf">
+            <h3>serianwgf</h3>
+            <div class="role" style="background: #2980b9;">Sr. Helper</div>
+            <p class="quote">"Sempre disponibile per ogni dubbio o problema dei cittadini!"</p>
+        </div>
+
+    </div>
+
+    <div style="margin-top: 50px; opacity: 0.6; font-size: 12px; text-align: center;">
+        Le skin sono caricate in tempo reale tramite Mojang API.
+    </div>
+
+</body>
+</html>

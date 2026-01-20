@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Professionale - VillaggioMC</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #1a2a1a; color: white; display: flex; flex-direction: column; align-items: center; }
+        .nav { width: 100%; padding: 20px; background: rgba(0,0,0,0.5); text-align: center; }
+        .nav a { color: #f1c40f; text-decoration: none; font-weight: bold; margin: 0 20px; }
+        .store-header { margin: 40px 0; text-align: center; }
+        .store-header h1 { color: #f1c40f; font-size: 42px; text-shadow: 2px 2px #000; }
+        .category-title { color: #f1c40f; width: 90%; max-width: 1000px; border-bottom: 2px solid #f1c40f; margin: 30px 0 20px; padding-bottom: 10px; font-size: 24px; text-transform: uppercase; }
+        .grid-store { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 90%; max-width: 1000px; margin-bottom: 40px; }
+        .card { background: #2d4a2d; border: 2px solid #f1c40f; border-radius: 20px; padding: 20px; text-align: center; transition: 0.3s; }
+        .card:hover { transform: scale(1.03); }
+        .price { font-size: 24px; color: #f1c40f; font-weight: bold; margin: 10px 0; }
+        .features { list-style: none; padding: 0; text-align: left; font-size: 14px; margin: 15px 0; }
+        .features li { margin-bottom: 5px; }
+        .btn-buy { display: block; background: #f1c40f; color: #1a2a1a; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="index.html">← Torna alla Home</a></div>
+    <div class="store-header"><h1>🛒 Store VillaggioMC</h1><p>Supporta la nostra community!</p></div>
+
+    <div class="category-title">⭐ Gradi (Rank)</div>
+    <div class="grid-store">
+        <div class="card"><h3>Rank EROE</h3><div class="price">€4.99</div><ul class="features"><li>✅ Comando /fly</li><li>✅ Kit Eroe</li><li>✅ Tag [EROE]</li></ul><a href="https://discord.gg/7ChEGbC9Vu" class="btn-buy">ACQUISTA</a></div>
+        <div class="card"><h3>Rank LEGENDA</h3><div class="price">€9.99</div><ul class="features"><li>✅ Vantaggi Eroe</li><li>✅ 5 Home</li><li>✅ Chat Colorata</li></ul><a href="https://discord.gg/7ChEGbC9Vu" class="btn-buy">ACQUISTA</a></div>
+        <div class="card" style="box-shadow: 0 0 15px #f1c40f;"><h3>Rank DIO</h3><div class="price">€19.99</div><ul class="features"><li>✅ Tutti i permessi</li><li>✅ Kit Divino</li><li>✅ Scia Particellare</li></ul><a href="https://discord.gg/7ChEGbC9Vu" class="btn-buy">ACQUISTA</a></div>
+    </div>
+
+    <div class="category-title">🔑 Casse & Chiavi</div>
+    <div class="grid-store">
+        <div class="card"><h3>3x Chiavi Rare</h3><div class="price">€2.50</div><a href="https://discord.gg/7ChEGbC9Vu" class="btn-buy">ACQUISTA</a></div>
+        <div class="card"><h3>5x Chiavi Epiche</h3><div class="price">€5.00</div><a href="https://discord.gg/7ChEGbC9Vu" class="btn-buy">ACQUISTA</a></div>
+        <div class="card"><h3>1x Chiave Divina</h3><div class="price">€7.00</div><a href="https://discord.gg/7ChEGbC9Vu" class="btn-buy">ACQUISTA</a></div>
+    </div>
+</body>
+</html>

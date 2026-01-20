@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopri il Server - VillaggioMC</title>
+    <style>
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #1a2a1a; color: white;
+            display: flex; flex-direction: column; align-items: center;
+            padding-bottom: 50px;
+        }
+        .nav { width: 100%; padding: 20px; background: rgba(0,0,0,0.5); text-align: center; }
+        .nav a { color: #f1c40f; text-decoration: none; font-weight: bold; margin: 0 20px; }
+        
+        .info-header { margin: 50px 0; text-align: center; padding: 0 20px; }
+        .info-header h1 { color: #f1c40f; font-size: 48px; text-shadow: 2px 2px #000; margin-bottom: 10px; }
+        .info-header p { font-size: 20px; opacity: 0.9; }
+
+        .content-container { width: 90%; max-width: 900px; }
+
+        .main-description {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid #f1c40f;
+            border-radius: 20px;
+            padding: 40px;
+            line-height: 1.8;
+            font-size: 18px;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .section-title { color: #f1c40f; font-size: 28px; margin-top: 30px; border-bottom: 1px solid rgba(241, 196, 15, 0.3); padding-bottom: 10px; }
+
+        /* Stile Bottone IP */
+        .copy-box {
+            background: #2d4a2d;
+            border: 3px dashed #f1c40f;
+            padding: 30px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        .ip-text { font-size: 24px; font-weight: bold; color: #f1c40f; display: block; margin-bottom: 15px; }
+        
+        .btn-copy {
+            background: #f1c40f; color: #1a2a1a;
+            padding: 15px 30px; border-radius: 10px;
+            text-decoration: none; font-weight: bold;
+            display: inline-block; cursor: pointer;
+            transition: 0.3s; border: none; font-size: 18px;
+        }
+        .btn-copy:hover { transform: scale(1.05); background: #fff; }
+
+        .highlight { color: #f1c40f; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="index.html">← Torna alla Home</a></div>
+
+    <div class="info-header">
+        <h1>🌍 Benvenuto su VillaggioMC</h1>
+        <p>L'avventura survival definitiva che stavi cercando.</p>
+    </div>
+
+    <div class="content-container">
+        <div class="main-description">
+            <h2 style="color: #f1c40f; text-align: center; margin-top: 0;">La Nostra Filosofia</h2>
+            <p>
+                VillaggioMC non è il solito server survival dove vieni abbandonato a te stesso. È un progetto nato per ridare valore alla <span class="highlight">collaborazione e al rispetto tra giocatori</span>. Abbiamo creato un mondo dove l'avventura non finisce mai, bilanciando perfettamente la difficoltà del gioco con sistemi moderni che rendono tutto più fluido.
+            </p>
+            
+            <p class="section-title">🏡 Un Mondo Protetto</p>
+            <p>
+                Sappiamo quanto sia frustrante vedere le proprie costruzioni distrutte dai griefers. Per questo su VillaggioMC utilizziamo i sistemi di protezione più avanzati. Ogni blocco che piazzi è protetto, e solo tu decidi chi può interagire con le tue creazioni. Che tu voglia costruire un piccolo cottage o una metropoli futuristica, qui <span class="highlight">il tuo lavoro è al sicuro</span>.
+            </p>
+
+            <p class="section-title">💰 Un'Economia Reale</p>
+            <p>
+                Vuoi diventare il mercante più ricco del server? Il nostro sistema economico ti permette di vendere risorse preziose, creare shop gestiti dai giocatori e partecipare ad aste emozionanti. Il denaro che guadagni può essere usato per scalare i <span class="highlight">Rank del server</span> o per acquistare oggetti rarissimi che non si trovano nel mondo normale.
+            </p>
+
+            <p class="section-title">⚔️ Sfide e Community</p>
+            <p>
+                Lo staff di VillaggioMC è costantemente al lavoro per aggiungere nuovi contenuti. Troverai dungeon da esplorare, boss da sconfiggere e zone PvP dove testare la tua forza contro gli altri cittadini. Ma ricorda: la forza bruta non è tutto. La nostra forza è la <span class="highlight">community</span> che ogni giorno si riunisce in piazza per scambiare idee e aiutarsi a vicenda.
+            </p>
+        </div>
+
+        <div class="copy-box">
+            <span class="ip-text" id="serverIP">villaggiomc.mcsh.io</span>
+            <button class="btn-copy" onclick="copyIP()" id="copyBtn">📋 COPIA IP E GIOCA ORA</button>
+            <p style="margin-top: 15px; font-size: 14px; opacity: 0.7;">Supportiamo la versione 1.20.x e superiori!</p>
+        </div>
+    </div>
+
+    <script>
+    function copyIP() {
+        const ip = "villaggiomc.mcsh.io";
+        navigator.clipboard.writeText(ip).then(() => {
+            const btn = document.getElementById('copyBtn');
+            btn.innerHTML = "✅ IP COPIATO!";
+            btn.style.background = "#fff";
+            setTimeout(() => {
+                btn.innerHTML = "📋 COPIA IP E GIOCA ORA";
+                btn.style.background = "#f1c40f";
+            }, 2500);
+        });
+    }
+    </script>
+
+</body>
+</html>

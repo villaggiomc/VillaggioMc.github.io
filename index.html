@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VillaggioMC - Sito Ufficiale</title>
+    <style>
+        /* Sfondo e stile generale - Tema Villaggio (Verde e Oro) */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #1a2a1a 0%, #2d4a2d 50%, #4a773c 100%);
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        /* Header con Titolo e Descrizione */
+        .header {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 56px;
+            margin: 10px 0;
+            color: #f1c40f; 
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+        }
+
+        .header p {
+            font-size: 20px;
+            font-style: italic;
+            background: rgba(0,0,0,0.4);
+            padding: 8px 20px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        /* Contenitore dei bottoni principali */
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin-top: 40px;
+        }
+
+        .button {
+            display: block;
+            background: rgba(45, 74, 45, 0.9);
+            border: 2px solid #f1c40f;
+            color: #f1c40f;
+            text-decoration: none;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 40px;
+            font-size: 19px;
+            font-weight: bold;
+            transition: 0.4s all ease;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Effetto hover bottoni */
+        .button:hover {
+            background: #f1c40f;
+            color: #1a2a1a;
+            transform: translateY(-3px);
+            letter-spacing: 1px;
+        }
+
+        /* Sezione "Chi Siamo" */
+        .about-section {
+            background: rgba(0, 0, 0, 0.5);
+            border-left: 6px solid #f1c40f;
+            padding: 25px;
+            margin-top: 50px;
+            width: 85%;
+            max-width: 650px;
+            border-radius: 0 20px 20px 0;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .about-section h2 {
+            color: #f1c40f;
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .about-section p {
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding-top: 60px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🏡 VillaggioMC</h1>
+        <p>Benvenuti nella nostra community Survival!</p>
+    </div>
+
+    <div class="container">
+        <a href="info.html" class="button">🎮 Scopri il Server!</a>
+        
+        <a href="store.html" class="button">🛒 Visita lo Store Ufficiale</a>
+        
+        <a href="staff.html" class="button">🤝 Conosci lo Staff!</a>
+        
+        <a href="https://discord.gg/7ChEGbC9Vu" target="_blank" class="button">💬 Entra nella Piazza (Discord)</a>
+        
+        <a href="regole.html" class="button">⚖️ Regolamento</a>
+    </div>
+
+    <div class="about-section">
+        <h2>📜 Chi Siamo</h2>
+        <p>
+            Benvenuti su <b>VillaggioMC</b>! Siamo una realtà nata dalla passione per il survival puro e la collaborazione tra giocatori. 
+            Il nostro obiettivo è offrire un'esperienza di gioco sicura, divertente e priva di tossicità. 
+            Qui, ogni costruzione ha una storia e ogni giocatore è parte della famiglia. 
+            Non siamo solo un server, siamo un villaggio!
+        </p>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 VillaggioMC - Creato con orgoglio.
+    </div>
+    <a href="javascript:void(0)" class="button" onclick="copyIP()" id="ipButton">📋 Copia IP Server</a>
+
+<script>
+function copyIP() {
+    const ip = "villaggiomc.mcsh.io";
+    navigator.clipboard.writeText(ip).then(() => {
+        const btn = document.getElementById('ipButton');
+        btn.innerHTML = "✅ IP Copiato!";
+        btn.style.background = "#f1c40f";
+        btn.style.color = "#1a2a1a";
+        setTimeout(() => {
+            btn.innerHTML = "📋 Copia IP Server";
+            btn.style.background = "rgba(45, 74, 45, 0.9)";
+            btn.style.color = "#f1c40f";
+        }, 2000);
+    });
+}
+</script>
+
+</body>
+</html>
