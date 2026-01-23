@@ -3,46 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regolamento - VillaggioMC</title>
+    <title>Regolamento | VillaggioMC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #1a2a1a; color: white; display: flex; flex-direction: column; align-items: center; padding-bottom: 50px; }
-        .nav { width: 100%; padding: 20px; background: rgba(0,0,0,0.5); text-align: center; }
-        .nav a { color: #f1c40f; text-decoration: none; font-weight: bold; margin: 0 20px; }
-        .regole-container { width: 90%; max-width: 800px; margin-top: 40px; }
-        h1 { color: #f1c40f; text-align: center; font-size: 42px; }
-        .regola-box { background: rgba(0,0,0,0.3); border-left: 4px solid #f1c40f; padding: 20px; margin-bottom: 20px; border-radius: 0 10px 10px 0; }
-        .regola-box h3 { margin-top: 0; color: #f1c40f; }
-        .ban { color: #ff4d4d; font-weight: bold; }
+        :root {
+            --primary: #f1c40f;
+            --bg: #0a0a0a;
+            --card: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            background-image: radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 100%);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            padding: 20px;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; }
+        nav a:hover { color: var(--primary); }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        h1 { font-size: 3rem; color: var(--primary); text-align: center; margin-bottom: 50px; font-weight: 800; }
+
+        .rule-card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 5px solid var(--primary);
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .rule-card:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .rule-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .rule-card p { opacity: 0.8; line-height: 1.6; }
+
+        footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <div class="nav"><a href="index.html">← Torna alla Home</a></div>
-    <h1>⚖️ Regolamento VillaggioMC</h1>
-    <div class="regole-container">
-        <div class="regola-box">
-            <h3>1. Rispetto Comune</h3>
-            <p>È vietato insultare, discriminare o usare un linguaggio volgare in chat. Siamo una community amichevole.</p>
-        </div>
-        <div class="regola-box">
-            <h3>2. No Griefing</h3>
-            <p>È severamente vietato distruggere le costruzioni altrui o rubare nelle zone protette. <span class="ban">PENA: BAN 3 GIORNI.</span></p>
-        </div>
-        <div class="regola-box">
-            <h3>3. No Cheat / Hack</h3>
-            <p>L'uso di X-Ray, Fly (non autorizzata) o altre mod che danno vantaggi ingiusti è proibito.</p>
-        </div>
-        <div class="regola-box">
-            <h3>4. Rispetto dello Staff</h3>
-            <p>Le decisioni dei Founder e degli Admin sono definitive. Non contestare le sanzioni in chat pubblica.</p>
-        </div>
-        <div class="regola-box">
-            <h3>5. No spamf</h3>
-            <p>Non spammare in chat</p>
-        </div>
-        <div class="regola-box">
-            <h3>6. No minacce</h3>
-            <p>Non parlare di NGFW, dox, doss e non minacciare NESSUNO.</p>
-        </div>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="info.html">INFO</a>
+    <a href="staff.html">STAFF</a>
+    <a href="regolamento.html" style="color: var(--primary);">REGOLAMENTO</a>
+</nav>
+
+<div class="container">
+    <h1>📜 REGOLAMENTO</h1>
+
+    <div class="rule-card">
+        <h3><i class="fas fa-hammer"></i> 1. NO GRIEFING</h3>
+        <p>È severamente vietato distruggere, modificare o rubare nelle costruzioni degli altri giocatori. Il rispetto per il lavoro altrui è alla base di VillaggioMC.</p>
     </div>
+
+    <div class="rule-card">
+        <h3><i class="fas fa-users-slash"></i> 2. NO MULTIACCOUNT</h3>
+        <p>Ogni giocatore può utilizzare un solo account. L'uso di account secondari per aggirare ban o farmare risorse illegalmente comporterà il ban di entrambi i profili.</p>
+    </div>
+
+    <div class="rule-card">
+        <h3><i class="fas fa-bug"></i> 3. NO CHEAT / EXPLOIT</h3>
+        <p>L'uso di hack (X-Ray, KillAura, Fly, ecc.) o lo sfruttamento di bug del gioco per trarne vantaggio è punito con il ban permanente senza possibilità di appello.</p>
+    </div>
+
+    <div class="rule-card">
+        <h3><i class="fas fa-comments"></i> 4. COMPORTAMENTO IN CHAT</h3>
+        <p>Mantieni un linguaggio decoroso. Sono vietati insulti, bestemmie, spam, razzismo e ogni forma di bullismo. Rispetta gli altri cittadini e lo Staff.</p>
+    </div>
+
+    <div class="rule-card">
+        <h3><i class="fas fa-user-shield"></i> 5. RISPETTO PER LO STAFF</h3>
+        <p>Le decisioni dei Founder e degli Admin vanno rispettate. Se ritieni di aver subito un'ingiustizia, apri un ticket sul server Discord ufficiale invece di protestare in chat pubblica.</p>
+    </div>
+
+    <div class="rule-card">
+        <h3><i class="fas fa-shopping-basket"></i> 6. SCAMBI E ASTE</h3>
+        <p>Le truffe (scam) durante gli scambi tra giocatori non sono tollerate. Usa i sistemi ufficiali del server per commerciare in sicurezza.</p>
+    </div>
+    <div class="rule-card">
+        <h3><i class="fas fa-shopping-basket"></i> 7. MINACCE</h3>
+        <p>Le Minacce a staff o a player sono bannabili, no minacce di Dox, DoSS, e altri tipi di minacce</p>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 VillaggioMC - Rispetta le regole per un'esperienza di gioco migliore!
+</footer>
+
 </body>
 </html>
