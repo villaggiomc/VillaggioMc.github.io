@@ -1,16 +1,146 @@
-<table>
-    <thead>
-        <tr>
-            <th>Utente</th>
-            <th>Motivo</th>
-            <th>Data</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Player_Burlone</td>
-            <td>Griefing spawn</td>
-            <td>23/01/2026</td>
-        </tr>
-    </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ban List | VillaggioMC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f1c40f;
+            --danger: #e74c3c;
+            --bg: #0a0a0a;
+            --card: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            background-image: radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 100%);
+            color: white;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav {
+            padding: 20px;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; }
+        nav a:hover { color: var(--primary); }
+
+        .container { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+
+        h1 { font-size: 3rem; color: var(--danger); margin-bottom: 10px; font-weight: 800; }
+        .warning-text { opacity: 0.8; margin-bottom: 40px; }
+
+        /* Pulsante Regolamento */
+        .btn-rules {
+            background: var(--primary);
+            color: black;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 50px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-rules:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(241, 196, 15, 0.4); }
+
+        /* Tabella Decorata */
+        .ban-table-container {
+            background: var(--card);
+            border-radius: 25px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 15px;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+        }
+
+        td {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 1rem;
+        }
+
+        tr:hover { background: rgba(231, 76, 60, 0.05); }
+
+        .player-cell { display: flex; align-items: center; gap: 15px; justify-content: center; }
+        .player-cell img { width: 35px; border-radius: 5px; }
+        
+        .status-perm { color: var(--danger); font-weight: bold; background: rgba(231, 76, 60, 0.1); padding: 5px 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="info.html">INFO</a>
+    <a href="staff.html">STAFF</a>
+    <a href="regolamento.html">REGOLAMENTO</a>
+    <a href="ban.html" style="color: var(--danger);">BAN LIST</a>
+</nav>
+
+<div class="container">
+    <h1>🚫 BAN LIST</h1>
+    <p class="warning-text">La trasparenza è importante. Qui trovi la lista degli utenti sanzionati.</p>
+
+    <div style="margin-bottom: 50px;">
+        <p style="margin-bottom: 15px; font-weight: 600;">Vedi il regolamento per non prendere sanzioni!</p>
+        <a href="regolamento.html" class="btn-rules">
+            <i class="fas fa-book"></i> LEGGI IL REGOLAMENTO
+        </a>
+    </div>
+
+    <div class="ban-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Giocatore</th>
+                    <th>Motivo</th>
+                    <th>Staffer</th>
+                    <th>Durata</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="player-cell">
+                        <img src="https://mc-heads.net/avatar/Player_Esempio/35" alt="head">
+                        <span>Player_Esempio</span>
+                    </td>
+                    <td>Uso di X-Ray</td>
+                    <td>Game_Invicible26</td>
+                    <td><span class="status-perm">10 Giorni</span></td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 VillaggioMC - Gioca pulito, divertiti con noi!
+</footer>
+
+</body>
+</html>
