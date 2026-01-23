@@ -5,36 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Info | VillaggioMC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: white; text-align: center; padding: 50px 20px; }
-        .card { background: rgba(255,255,255,0.05); padding: 40px; border-radius: 30px; max-width: 700px; margin: auto; border: 1px solid #f1c40f; }
-        h1 { color: #f1c40f; }
-        p { line-height: 1.8; opacity: 0.9; }
-        .ip-copy { background: #f1c40f; color: black; padding: 20px; border-radius: 15px; cursor: pointer; font-weight: bold; margin-top: 30px; display: inline-block; transition: 0.3s; }
-        .ip-copy:hover { transform: scale(1.05); background: #e67e22; }
-        .back { display: block; margin-top: 20px; color: white; text-decoration: none; opacity: 0.6; }
+        :root {
+            --primary: #f1c40f;
+            --bg: #0a0a0a;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            background-image: radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 100%);
+            color: white;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        nav {
+            padding: 20px;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; }
+        nav a:hover { color: var(--primary); }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 25px;
+        }
+
+        .info-card {
+            background: var(--glass);
+            padding: 50px;
+            border-radius: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        h1 { color: var(--primary); font-size: 2.5rem; font-weight: 800; margin-bottom: 40px; text-transform: uppercase; }
+        h2 { color: var(--primary); font-size: 1.8rem; margin-top: 40px; display: flex; align-items: center; gap: 15px; }
+        
+        p { opacity: 0.9; font-size: 1.1rem; text-align: justify; }
+
+        .highlight { color: var(--primary); font-weight: 600; }
+
+        .ip-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(241, 196, 15, 0.1);
+            border-radius: 20px;
+            border: 2px dashed var(--primary);
+        }
+
+        .ip-copy {
+            background: var(--primary);
+            color: black;
+            padding: 15px 35px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 800;
+            display: inline-block;
+            transition: 0.3s;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+
+        .ip-copy:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--primary); }
+
+        footer { margin-top: 40px; opacity: 0.5; font-size: 0.9rem; padding-bottom: 40px; text-align: center; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Benvenuti su VillaggioMC</h1>
-        <p>VillaggioMC non è solo un server, è una community creata per divertirsi. Qui potrai trovare un'esperienza Cross-Play fluida tra Java e Bedrock. Partecipa a battaglie epiche, sfida i tuoi amici nelle Duels o collabora nella modalità Survival!</p>
-        <p>Il nostro staff è sempre attivo per garantirti divertimento e sicurezza.</p>
-        <p>Entra ora su VillaggioMc, ti aspettiamo!</p>
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="info.html">INFO</a>
+    <a href="staff.html">STAFF</a>
+    <a href="regolamento.html">REGOLAMENTO</a>
+</nav>
+
+<div class="container">
+    <div class="info-card">
+        <h1>COSA OFFRIAMO?</h1>
         
-        <div class="ip-copy" onclick="copyIP()">
-            <i class="fas fa-copy"></i> COPIA IP: villaggiomc.mcsh.io
+        <p>VillaggioMC non è il solito server survival dove vieni abbandonato a te stesso. È un progetto nato per ridare valore alla <span class="highlight">collaborazione</span> e al <span class="highlight">rispetto</span> tra giocatori. Abbiamo creato un mondo dove l'avventura non finisce mai, bilanciando perfettamente la difficoltà del gioco con sistemi moderni che rendono tutto più fluido.</p>
+
+        <h2>🏡 Un Mondo Protetto</h2>
+        <p>Sappiamo quanto sia frustrante vedere le proprie costruzioni distrutte dai griefers. Per questo su VillaggioMC utilizziamo i sistemi di protezione più avanzati. Ogni blocco che piazzi è protetto, e solo tu decidi chi può interagire con le tue creazioni. Che tu voglia costruire un piccolo cottage o una metropoli futuristica, qui <span class="highlight">il tuo lavoro è al sicuro</span>.</p>
+
+        <h2>💰 Un'Economia Reale</h2>
+        <p>Vuoi diventare il mercante più ricco del server? Il nostro sistema economico ti permette di vendere risorse preziose, creare shop gestiti dai giocatori e partecipare ad aste emozionanti. Il denaro che guadagni può essere usato per scalare i <span class="highlight">Rank del server</span> o per acquistare oggetti rarissimi che non si trovano nel mondo normale.</p>
+
+        <h2>⚔️ Sfide e Community</h2>
+        <p>Lo staff di VillaggioMC è costantemente al lavoro per aggiungere nuovi contenuti. Troverai dungeon da esplorare, boss da sconfiggere e zone PvP dove testare la tua forza contro gli altri cittadini. Ma ricorda: la forza bruta non è tutto. La nostra forza è la <span class="highlight">community</span> che ogni giorno si riunisce in piazza per scambiare idee e aiutarsi a vicenda.</p>
+
+        <div class="ip-section">
+            <p style="text-align: center; margin-bottom: 10px;">Pronto a scrivere la tua storia?</p>
+            <div class="ip-copy" onclick="copyIP()">
+                <i class="fas fa-copy"></i> COPIA IP: villaggiomc.mcsh.io
+            </div>
         </div>
-        
-        <a href="index.html" class="back">← Torna alla Home</a>
     </div>
 
-    <script>
-        function copyIP() {
-            navigator.clipboard.writeText("villaggiomc.mcsh.io");
-            alert("IP Copiato! Buon Game!.");
-        }
-    </script>
+    <footer>
+        &copy; 2026 VillaggioMC - Creato per divertirsi
+    </footer>
+</div>
+
+<script>
+    function copyIP() {
+        navigator.clipboard.writeText("villaggiomc.mcsh.io");
+        alert("🚀 IP Copiato! Incolla villaggiomc.mcsh.io nel tuo Minecraft launcher.");
+    }
+</script>
+
 </body>
 </html>
