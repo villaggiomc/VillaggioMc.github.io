@@ -5,127 +5,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Info | VillaggioMC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #f1c40f;
-            --bg: #0a0a0a;
-            --glass: rgba(255, 255, 255, 0.05);
+            --bg: #0d0216;
+            --purple: #8a2be2;
+            --pink: #ff00ff;
+            --cyan: #00ffff;
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.03);
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: var(--bg);
-            background-image: radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 100%);
-            color: white;
+            background-color: var(--bg);
+            color: var(--white);
             margin: 0;
-            padding: 0;
-            line-height: 1.8;
+            background-image: 
+                linear-gradient(rgba(255, 0, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 0, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
         }
 
         nav {
             padding: 20px;
-            background: rgba(0,0,0,0.8);
+            background: rgba(13, 2, 22, 0.95);
             backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--pink);
             text-align: center;
-            border-bottom: 1px solid var(--primary);
+            box-shadow: 0 0 15px var(--pink);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; }
-        nav a:hover { color: var(--primary); }
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
 
         .container {
             max-width: 900px;
             margin: 60px auto;
-            padding: 0 25px;
+            padding: 0 20px;
         }
 
-        .info-card {
-            background: var(--glass);
-            padding: 50px;
-            border-radius: 40px;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        /* Intestazione Pagina */
+        .info-header {
+            text-align: center;
+            margin-bottom: 60px;
         }
 
-        h1 { color: var(--primary); font-size: 2.5rem; font-weight: 800; margin-bottom: 40px; text-transform: uppercase; }
-        h2 { color: var(--primary); font-size: 1.8rem; margin-top: 40px; display: flex; align-items: center; gap: 15px; }
-        
-        p { opacity: 0.9; font-size: 1.1rem; text-align: justify; }
-
-        .highlight { color: var(--primary); font-weight: 600; }
-
-        .ip-section {
-            margin-top: 50px;
-            padding: 30px;
-            background: rgba(241, 196, 15, 0.1);
-            border-radius: 20px;
-            border: 2px dashed var(--primary);
+        .info-header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            background: linear-gradient(to right, var(--white), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
         }
 
-        .ip-copy {
-            background: var(--primary);
-            color: black;
-            padding: 15px 35px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 800;
-            display: inline-block;
-            transition: 0.3s;
-            margin-top: 15px;
+        .info-header .subtitle {
             text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--cyan);
+            font-weight: 800;
+            font-size: 0.9rem;
         }
 
-        .ip-copy:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--primary); }
+        /* Box Contenuti */
+        .content-card {
+            background: var(--glass);
+            border: 1px solid rgba(255, 0, 255, 0.2);
+            border-radius: 30px;
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
 
-        footer { margin-top: 40px; opacity: 0.5; font-size: 0.9rem; padding-bottom: 40px; text-align: center; }
+        .content-card:hover {
+            border-color: var(--pink);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.1);
+            transform: scale(1.01);
+        }
+
+        .content-card h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyan);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .content-card p {
+            line-height: 1.8;
+            opacity: 0.9;
+            font-size: 1.05rem;
+        }
+
+        .highlight {
+            color: var(--pink);
+            font-weight: 700;
+            text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+        }
+
+        /* Icone Fluttuanti */
+        .icon-box {
+            background: rgba(0, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            color: var(--cyan);
+            border: 1px solid var(--cyan);
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            opacity: 0.5;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html">HOME</a>
-    <a href="info.html">INFO</a>
-    <a href="staff.html">STAFF</a>
-    <a href="regolamento.html">REGOLAMENTO</a>
-    <a href="team.html">TEAM INVINCIBLE</a>
-    <a href="store.html">STORE</a>
+    <a href="index.html">Home</a>
+    <a href="staff.html">Staff</a>
+    <a href="team.html">Team Invincible</a>
+    <a href="ban.html">Ban List</a>
 </nav>
 
 <div class="container">
-    <div class="info-card">
+    <div class="info-header">
+        <div class="subtitle">Benvenuto nel futuro</div>
         <h1>COSA OFFRIAMO?</h1>
-        
-        <p>VillaggioMC non è il solito server survival dove vieni abbandonato a te stesso. È un progetto nato per ridare valore alla <span class="highlight">collaborazione</span> e al <span class="highlight">rispetto</span> tra giocatori. Abbiamo creato un mondo dove l'avventura non finisce mai, bilanciando perfettamente la difficoltà del gioco con sistemi moderni che rendono tutto più fluido.</p>
-
-        <h2>🏡 Un Mondo Protetto</h2>
-        <p>Sappiamo quanto sia frustrante vedere le proprie costruzioni distrutte dai griefers. Per questo su VillaggioMC utilizziamo i sistemi di protezione più avanzati. Ogni blocco che piazzi è protetto, e solo tu decidi chi può interagire con le tue creazioni. Che tu voglia costruire un piccolo cottage o una metropoli futuristica, qui <span class="highlight">il tuo lavoro è al sicuro</span>.</p>
-
-        <h2>💰 Un'Economia Reale</h2>
-        <p>Vuoi diventare il mercante più ricco del server? Il nostro sistema economico ti permette di vendere risorse preziose, creare shop gestiti dai giocatori e partecipare ad aste emozionanti. Il denaro che guadagni può essere usato per scalare i <span class="highlight">Rank del server</span> o per acquistare oggetti rarissimi che non si trovano nel mondo normale.</p>
-
-        <h2>⚔️ Sfide e Community</h2>
-        <p>Lo staff di VillaggioMC è costantemente al lavoro per aggiungere nuovi contenuti. Troverai dungeon da esplorare, boss da sconfiggere e zone PvP dove testare la tua forza contro gli altri cittadini. Ma ricorda: la forza bruta non è tutto. La nostra forza è la <span class="highlight">community</span> che ogni giorno si riunisce in piazza per scambiare idee e aiutarsi a vicenda.</p>
-
-        <div class="ip-section">
-            <p style="text-align: center; margin-bottom: 10px;">Pronto a scrivere la tua storia?</p>
-            <div class="ip-copy" onclick="copyIP()">
-                <i class="fas fa-copy"></i> COPIA IP: villaggiomc.mcsh.io
-            </div>
-        </div>
     </div>
 
-    <footer>
-        &copy; 2026 VillaggioMC - Creato per divertirsi
-    </footer>
+    <div class="content-card" style="border-left: 5px solid var(--pink);">
+        <p>
+            VillaggioMC non è il solito server survival dove vieni abbandonato a te stesso. È un progetto nato per ridare valore alla <span class="highlight">collaborazione</span> e al <span class="highlight">rispetto</span> tra giocatori. Abbiamo creato un mondo dove l'avventura non finisce mai, bilanciando perfettamente la difficoltà del gioco con sistemi moderni che rendono tutto più fluido.
+        </p>
+    </div>
+
+    <div class="content-card">
+        <h2><div class="icon-box"><i class="fas fa-home"></i></div> Un Mondo Protetto</h2>
+        <p>
+            Sappiamo quanto sia frustrante vedere le proprie costruzioni distrutte dai griefers. Per questo su VillaggioMC utilizziamo i sistemi di protezione più avanzati. Ogni blocco che piazzi è protetto, e solo tu decidi chi può interagire con le tue creazioni. Che tu voglia costruire un piccolo cottage o una metropoli futuristica, qui <span class="highlight">il tuo lavoro è al sicuro</span>.
+        </p>
+    </div>
+
+    <div class="content-card">
+        <h2><div class="icon-box"><i class="fas fa-coins"></i></div> Un'Economia Reale</h2>
+        <p>
+            Vuoi diventare il mercante più ricco del server? Il nostro sistema economico ti permette di vendere risorse preziose, creare shop gestiti dai giocatori e partecipare ad aste emozionanti. Il denaro che guadagni può essere usato per scalare i <span class="highlight">Rank del server</span> o per acquistare oggetti rarissimi che non si trovano nel mondo normale.
+        </p>
+    </div>
+
+    <div class="content-card">
+        <h2><div class="icon-box"><i class="fas fa-sword"></i></div> Sfide e Community</h2>
+        <p>
+            Lo staff di VillaggioMC è costantemente al lavoro per aggiungere nuovi contenuti. Troverai dungeon da esplorare, boss da sconfiggere e zone PvP dove testare la tua forza contro gli altri cittadini. Ma ricorda: la forza bruta non è tutto. La nostra forza è la <span class="highlight">community</span> che ogni giorno si riunisce in piazza per scambiare idee e aiutarsi a vicenda.
+        </p>
+    </div>
 </div>
 
-<script>
-    function copyIP() {
-        navigator.clipboard.writeText("villaggiomc.mcsh.io");
-        alert("🚀 IP Copiato! Incolla villaggiomc.mcsh.io nel tuo Minecraft launcher.");
-    }
-</script>
+<footer>
+    &copy; 2026 VILLAGGIOMC NETWORK - ALL RIGHTS RESERVED
+</footer>
 
 </body>
 </html>
