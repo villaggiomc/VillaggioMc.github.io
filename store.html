@@ -3,138 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store | VillaggioMC</title>
+    <title>Store Ufficiale | VillaggioMC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #f1c40f;
-            --bg: #0a0a0a;
-            --card: rgba(255, 255, 255, 0.05);
+            --bg: #0d0216;
+            --purple: #8a2be2;
+            --pink: #ff00ff;
+            --cyan: #00ffff;
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.03);
+            --gold: #ffcc00;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: var(--bg);
-            background-image: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
-            color: white;
+            background-color: var(--bg);
+            color: var(--white);
             margin: 0;
-            text-align: center;
+            background-image: 
+                linear-gradient(rgba(255, 0, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 0, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
         }
 
         nav {
             padding: 20px;
-            background: rgba(0,0,0,0.8);
+            background: rgba(13, 2, 22, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--primary);
+            border-bottom: 2px solid var(--pink);
+            text-align: center;
+            box-shadow: 0 0 15px var(--pink);
         }
 
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; }
-        nav a:hover { color: var(--primary); }
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
 
-        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
 
-        h1 { font-size: 3.5rem; color: var(--primary); margin-bottom: 10px; font-weight: 800; }
-        .subtitle { opacity: 0.7; margin-bottom: 50px; font-size: 1.2rem; }
+        .store-header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            background: linear-gradient(to bottom, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px rgba(255,204,0,0.3));
+        }
 
         .store-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin-top: 60px;
         }
 
-        .package-card {
-            background: var(--card);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 25px;
+        /* Card Pacchetti */
+        .rank-card {
+            background: var(--glass);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
             padding: 40px 20px;
-            transition: all 0.3s ease;
+            transition: 0.4s;
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(10px);
         }
 
-        .package-card:hover {
+        .rank-card:hover {
             transform: translateY(-15px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 40px rgba(241, 196, 15, 0.15);
+            border-color: var(--cyan);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
         }
 
-        .package-card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
-        
-        .price { font-size: 2rem; font-weight: 800; margin: 15px 0; color: #2ecc71; }
-        
-        .features-list { list-style: none; padding: 0; margin: 20px 0; font-size: 0.9rem; opacity: 0.8; }
-        .features-list li { margin: 8px 0; }
+        .rank-card.popular {
+            border-color: var(--pink);
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+        }
+
+        .rank-card.popular::before {
+            content: "POPOLARE";
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--pink);
+            color: black;
+            font-size: 0.7rem;
+            font-weight: 900;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-family: 'Orbitron';
+        }
+
+        .rank-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--cyan);
+            filter: drop-shadow(0 0 10px var(--cyan));
+        }
+
+        .rank-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin: 10px 0;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #2ecc71;
+            margin: 20px 0;
+            font-family: 'Orbitron';
+            text-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .features li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0.8;
+        }
+
+        .features li i { color: #2ecc71; }
 
         .btn-buy {
-            background: var(--primary);
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: var(--white);
             color: black;
-            padding: 12px 30px;
-            border-radius: 10px;
             text-decoration: none;
-            font-weight: 800;
-            display: inline-block;
+            border-radius: 12px;
+            font-weight: 900;
+            font-family: 'Orbitron';
             transition: 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
-        .btn-buy:hover { transform: scale(1.1); filter: brightness(1.1); }
+        .rank-card.popular .btn-buy {
+            background: var(--pink);
+            color: white;
+        }
 
-        .featured { border: 2px solid var(--primary); background: rgba(241, 196, 15, 0.05); }
-        .badge { position: absolute; top: 15px; right: -30px; background: var(--primary); color: black; padding: 5px 40px; transform: rotate(45deg); font-size: 0.7rem; font-weight: 800; }
+        .btn-buy:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px currentColor;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 40px;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html">HOME</a>
-    <a href="info.html">INFO</a>
-    <a href="staff.html">STAFF</a>
-    <a href="store.html" style="color: var(--primary);">STORE</a>
-    <a href="team.html">TEAM INVINCIBLE</a>
-    <a href="store.html">STORE</a>
-    <a href="ban.html">BAN LIST</a>
-
+    <a href="index.html">Home</a>
+    <a href="staff.html">Staff</a>
+    <a href="team.html">Team Invincible</a>
+    <a href="ban.html">Ban List</a>
+    <a href="store.html" style="color: var(--pink);">Store</a>
 </nav>
 
 <div class="container">
-    <h1>STORE UFFICIALE</h1>
-    <p class="subtitle">Supporta VillaggioMC e ottieni vantaggi esclusivi nel gioco!</p>
+    <div class="store-header">
+        <h1>STORE UFFICIALE</h1>
+        <p>Supporta VillaggioMC e ottieni vantaggi esclusivi nel gioco!</p>
+    </div>
 
     <div class="store-grid">
-        <div class="package-card">
-            <i class="fas fa-crown"></i>
-            <h2>RANK INVINCIBLE</h2>
+        <div class="rank-card">
+            <div class="rank-icon"><i class="fas fa-crown"></i></div>
+            <h3>RANK INVINCIBLE</h3>
             <div class="price">€4.99</div>
-            <ul class="features-list">
-                <li><i class="fas fa-check"></i> Prefisso INVINCIBLE in chat</li>
-                <li><i class="fas fa-check"></i> Accesso a /fly nella Lobby</li>
-                <li><i class="fas fa-check"></i> Slot riservato nei server pieni</li>
+            <ul class="features">
+                <li><i class="fas fa-check-circle"></i> Prefisso INVINCIBLE in chat</li>
+                <li><i class="fas fa-check-circle"></i> Accesso a /fly nella Lobby</li>
+                <li><i class="fas fa-check-circle"></i> Slot riservato nei server pieni</li>
             </ul>
             <a href="#" class="btn-buy">ACQUISTA ORA</a>
         </div>
 
-        <div class="package-card featured">
-            <div class="badge">POPOLARE</div>
-            <i class="fas fa-gem"></i>
-            <h2>RANK MARIOX</h2>
+        <div class="rank-card popular">
+            <div class="rank-icon" style="color: var(--pink); filter: drop-shadow(0 0 10px var(--pink));"><i class="fas fa-gem"></i></div>
+            <h3>RANK MARIOX</h3>
             <div class="price">€9.99</div>
-            <ul class="features-list">
-                <li><i class="fas fa-check"></i> Tutti i vantaggi del INVINCIBLE ma con la tag "MARIOX"</li>
-                <li><i class="fas fa-check"></i> Colore chat personalizzato</li>
-                <li><i class="fas fa-check"></i> Kit settimanale speciale</li>
-                <li><i class="fas fa-check"></i> Crea fino a 10 Home</li>
+            <ul class="features">
+                <li><i class="fas fa-check-circle"></i> Tutti i vantaggi del INVINCIBLE</li>
+                <li><i class="fas fa-check-circle"></i> Tag esclusiva "MARIOX"</li>
+                <li><i class="fas fa-check-circle"></i> Colore chat personalizzato</li>
+                <li><i class="fas fa-check-circle"></i> Kit settimanale speciale</li>
+                <li><i class="fas fa-check-circle"></i> Crea fino a 10 Home</li>
             </ul>
             <a href="#" class="btn-buy">ACQUISTA ORA</a>
         </div>
 
-        <div class="package-card">
-            <i class="fas fa-coins"></i>
-            <h2>10.000 Villacoins</h2>
+        <div class="rank-card">
+            <div class="rank-icon" style="color: var(--gold); filter: drop-shadow(0 0 10px var(--gold));"><i class="fas fa-coins"></i></div>
+            <h3>10.000 VILLACOINS</h3>
             <div class="price">€2.50</div>
-            <ul class="features-list">
-                <li><i class="fas fa-check"></i> Monete da usare in gioco</li>
-                <li><i class="fas fa-check"></i> Compra oggetti nello shop</li>
-                <li><i class="fas fa-check"></i> Scambia con altri giocatori</li>
+            <ul class="features">
+                <li><i class="fas fa-check-circle"></i> Monete da usare in gioco</li>
+                <li><i class="fas fa-check-circle"></i> Compra oggetti nello shop</li>
+                <li><i class="fas fa-check-circle"></i> Scambia con altri giocatori</li>
             </ul>
             <a href="#" class="btn-buy">ACQUISTA ORA</a>
         </div>
